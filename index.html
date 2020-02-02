@@ -493,9 +493,9 @@
 #gallery {
     float: left;
     width: 100%;
-    padding: 2rem 10rem 5rem 10rem;
     overflow: hidden;
-    background: #eee;
+    background-color: #eee;
+    padding: 0 10rem 5rem;;
 }
 
 #gallery img {
@@ -508,6 +508,13 @@
 #contact {
     float: left;
     width: 100%;
+    background-color:#505269;;
+}
+#contact .title h2 {
+    color:#fff;
+}
+#contact .title .underline {
+    background-color: #fff;;
 }
 #contact .title .move {
     left: 45%;
@@ -521,6 +528,11 @@
 }
 .get .social {
     margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;;
+}
+.get .social .fa-facebook {
+    color: #fff;;
 }
 .contactUs {
     margin: 1rem 2rem;
@@ -529,21 +541,16 @@
 .get b{
     display: block;
     margin-bottom: .5rem;
-    color: #505269; 
+    color: rgb(201, 199, 199); 
 }
 .get span {
-    color: #959595;
+    color: #fff;
 }
 
-.get .fa-facebook {color: #1666b4;}
-
-.get .fa-instagram {color: orangered;}
-
-.get .fa-telegram {color: #3a97be;;}
 
 
 #theFooter {
-    background: #1a1a1a;
+    background: #232430;
     padding: 1rem 0;
     text-align: center;
     color: #fff;
@@ -1250,8 +1257,8 @@
             </div>
             <div class="blog-post">
                 
-              <div class="card" style="height: 80vh;width: 18rem;direction: rtl;">
-                  <img class="card-img-top" src="https://i.ibb.co/9yqxNWB/thought-catalog-OJZB0-VUQKKc-unsplash.jpg" alt="Card image cap">
+              <div class="card" style="width: 18rem;direction: rtl;">
+                  <img style="height:30vh;" class="card-img-top" src="https://i.ibb.co/9yqxNWB/thought-catalog-OJZB0-VUQKKc-unsplash.jpg" alt="Card image cap">
                   <div class="card-body">
                     <h5 class="card-title">چرا کتاب بخوانیم؟
                       </h5>
@@ -1263,7 +1270,7 @@
                   </div>
               </div>
                 
-             <div class="card" style="height: 80vh;width: 18rem;direction: rtl;">
+             <div class="card" style="width: 18rem;direction: rtl;">
                   <img style="height: 30vh;" class="card-img-top" src="https://i.ibb.co/0X7LGSB/25182433-1695618733840947-9122475218736178958-o.jpg" alt="Card image cap">
                   <div class="card-body">
                     <h5 class="card-title">رمان ملت عشق؟
@@ -1275,7 +1282,7 @@
                   </div>
               </div>
                  
-            <div class="card" style="height: 80vh;width: 18rem;direction: rtl;">
+            <div class="card" style="width: 18rem;direction: rtl;">
                   <img style="height: 30vh;" class="card-img-top" src="https://i.ibb.co/q9wfjWm/770x480.jpg" alt="Card image cap">
                   <div class="card-body">
                     <h5 class="card-title">وجدان زنو
@@ -1497,7 +1504,7 @@
         
         
         <div id="gallery">
-            
+            <div class="gallery-bg">
             <div class="title">
                 
                 <div class="target">
@@ -1534,7 +1541,7 @@
         
          
           
-            
+</div> 
         </div>
         
         <!--End Gallery-->
@@ -1568,9 +1575,18 @@
                 <div class="contactUs">
                     <b>شبکه های اجتماعی</b>
                     <div class="social">
-                        <a  href="https://m.me/106326210759383?fbclid=IwAR0MBYQpwl0BmyUXJHQ8bkST7kdhoBGm954L0GPRKwRCcr2ULlpsoJ7X6SU"><i class="fa fa-facebook"></i></a>
-                        <a  href="https://m.me/106326210759383?fbclid=IwAR0MBYQpwl0BmyUXJHQ8bkST7kdhoBGm954L0GPRKwRCcr2ULlpsoJ7X6SU"><i class="fa fa-instagram"></i></a>
-                        <a  href="https://m.me/106326210759383?fbclid=IwAR0MBYQpwl0BmyUXJHQ8bkST7kdhoBGm954L0GPRKwRCcr2ULlpsoJ7X6SU"><i class="fa fa-telegram"></i></a>
+                        
+                        <div>
+                            <a  href="https://m.me/106326210759383?fbclid=IwAR0MBYQpwl0BmyUXJHQ8bkST7kdhoBGm954L0GPRKwRCcr2ULlpsoJ7X6SU"><i class="fa fa-facebook"></i></a>
+                        </div>
+
+                        <div>
+                            <a  href="https://m.me/106326210759383?fbclid=IwAR0MBYQpwl0BmyUXJHQ8bkST7kdhoBGm954L0GPRKwRCcr2ULlpsoJ7X6SU"><i class="fa fa-instagram"></i></a>
+                        </div>
+                        
+                        <div>
+                            <a  href="https://m.me/106326210759383?fbclid=IwAR0MBYQpwl0BmyUXJHQ8bkST7kdhoBGm954L0GPRKwRCcr2ULlpsoJ7X6SU"><i class="fa fa-telegram"></i></a>
+                        </div>
                     </div>
                 </div>
                 
@@ -1613,25 +1629,25 @@ barMenu.addEventListener('click', ()=>{
 let targets = document.querySelectorAll('.target');
 
 
-window.addEventListener("scroll", function(){
-    
-  let doc = document.documentElement;
-  let top = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
-  
-  let windowHeight = window.innerHeight;
-  
-  for (i = 0; i < targets.length; ++i) {
-    let target = targets[i];
-    if(target.offsetTop < (top + (windowHeight/2))) {
-        target.classList.add("visible");
-    }
-    else {
+        window.addEventListener("scroll", function(){
+            
+        let doc = document.documentElement;
+        let top = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
         
-    }
-  }
-});
+        let windowHeight = window.innerHeight;
+        
+        for (i = 0; i < targets.length; ++i) {
+            let target = targets[i];
+            if(target.offsetTop < (top + (windowHeight/2))) {
+                target.classList.add("visible");
+            }
+            else {
+                
+            }
+        }
+        });
 
-  
+        
 
         </script>
         
